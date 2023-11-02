@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %> 
+<body>
+    <%- include("./partials/header") %> 
+    <!-- shopping cart section starts  -->
+    <section class="shopping-cart">
+        <h1 class="heading">your <span>products</span></h1>
+        <div class="box-container">
+
+
+        </div>
+        <div class="cart-total">
+            <h3> Total : <span class="cart-total-price"></span> </h3>
+        </div>
+    </section>
+    <section class="contact">
+        <form action="/products" method="POST">
+            <div id="looma" class="inputBox"></div>
+            <div class="inputBox">
+                <input type="text" id="name" name="name" placeholder="your name" required>
+                <input type="email" id="email" name="email" placeholder="your email" required>
+            </div>
+            <div class="inputBox">
+                <input type="tel" id="phone" name="phone" placeholder="your phone" required>
+                <input type="text" id="addres" name="addres" placeholder="your addres" required>
+            </div>
+            <input type="submit" class="btn" value="proceed to checkout">
+        </form>
+    </section>
+    
+    <!-- shopping cart section ends -->
+    <%- include("./partials/footer") %> 
+    <!-- custom js file link  & swiper js link   -->
+    <script src="cart.js"></script>
+</body>
+</html>

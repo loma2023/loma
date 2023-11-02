@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/header") %>
+        <table>
+            <br>
+            <h1 class="heading">All<span> Orders</span></h1>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>address</th>
+                <th>items</th>
+                <th>remove</th>
+            </tr>
+            <tbody id="tbody">
+<% for (i = 0; i < myorders.length; i++) { %>         
+                <tr>
+                    <td><%= myorders[i].name  %></th>
+                    <td><%= myorders[i].email  %></th>
+                    <td><%= myorders[i].phone  %></th>
+                    <td><%= myorders[i].addres %></th>
+                    <td><%= myorders[i].item %></th>
+                    <td><a data-id="<%=myorders[i].id%>" href="/delet/<%=myorders[i].id%>" class="Rmove_data">remove</a></th>
+                </tr>
+<% }; %> 
+        </tbody>
+        </table>
+
+
+        <%- include("./partials/footer") %>
+        <script src="orders.js"></script>
+    </body>
+</html>
